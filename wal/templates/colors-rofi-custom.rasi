@@ -1,0 +1,31 @@
+// Example snippet.
+* {{
+
+ active-background: {color0};
+    active-foreground: @foreground;
+    normal-background: @background;
+    normal-foreground: @foreground;
+    urgent-background: {color0};
+    urgent-foreground: @foreground;
+
+    alternate-active-background: @background;
+    alternate-active-foreground: @foreground;
+    alternate-normal-background: @background;
+    alternate-normal-foreground: @foreground;
+    alternate-urgent-background: @background;
+    alternate-urgent-foreground: @foreground;
+
+    selected-active-background: {color3};
+    selected-active-foreground: @foreground;
+    selected-normal-background: {color3};
+    selected-normal-foreground: @foreground;
+    selected-urgent-background: {color3};
+    selected-urgent-foreground: @foreground;
+
+    background-color: @background;
+    background: {color0};
+    foreground: {color3};
+    border-color: @background;
+	
+
+}}

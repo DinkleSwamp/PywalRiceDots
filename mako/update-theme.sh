@@ -13,5 +13,9 @@
 
 pidof mako && killall mako
 
-mako  --background-color  "${color14:-#ffffff}" \
-      --text-color  "${color0:-#cccccc}"  > /dev/null 2>&1 &
+mako  --background-color  "${color0:-#ffffff}" \
+      --border-color	"${color12:-#000000}" \
+      --border-size	0	\
+      --anchor		top-right	\
+      --actions		1	\
+      --text-color  "${color12:-#cccccc}"  > /dev/null 2>&1 &
