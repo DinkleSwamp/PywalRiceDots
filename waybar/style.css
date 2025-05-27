@@ -87,7 +87,10 @@ button:hover {
 #workspaces button.urgent {
     background-color: @color5;
 }
+
+#network,
 #power-profiles-daemon,
+#bluetooth,
 #idle_inhibitor,
 #cava,
 #scratchpad,
