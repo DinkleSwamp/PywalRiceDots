@@ -12,10 +12,9 @@
     "modules-left": [
        "network",
        "bluetooth",
-       "cpu",
-       "memory",
        "wireplumber",
-       "backlight"
+       "backlight",
+       "custom/music"
     ],
     "modules-center": [
       
@@ -24,7 +23,9 @@
     "modules-right": [
         "mpris",
 	"power-profiles-daemon",
-        "battery",
+       "cpu",
+       "memory",        
+       "battery",
         "tray",
 	"clock"
 	
@@ -94,6 +95,24 @@
 	"ignored-players": ["firefox"]
     },
 
+  "custom/music": {
+    "format": "{icon}{text}",
+    "format-icons": {
+        // "Playing": " ", // Uncomment if not using caway
+        "Paused": " ",
+        "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
+    },
+    "escape": true,
+    "tooltip": true,
+    "exec": "/home/jay/.config/waybar/caway",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next",
+    "on-click-right": "g4music",
+    "max-length": 35
+},
+
     
 
     "tray": {
@@ -135,7 +154,7 @@
         },
         "format": "{icon} {capacity}%",
         "format-full": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
+        "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
         // "format-good": "", // An empty format will hide the module
@@ -160,14 +179,14 @@
         "format-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
+            "hands-free": "",
+            "headset": "",
             "phone": "",
             "portable": "",
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        "on-click": "pavucontrol"
     
     }
     
